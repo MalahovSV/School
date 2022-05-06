@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridPrizers = new System.Windows.Forms.DataGridView();
             this.SurnamePupil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamePupil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SecondName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,25 +36,25 @@
             this.DateEvent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LevelEvent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WinPlace = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Balls = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TypeEvent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Balls = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeFilter = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ItemFilter = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ItemFilter = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPrizers)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // gridPrizers
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridPrizers.AllowUserToAddRows = false;
+            this.gridPrizers.AllowUserToDeleteRows = false;
+            this.gridPrizers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.gridPrizers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.gridPrizers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridPrizers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SurnamePupil,
             this.NamePupil,
             this.SecondName,
@@ -62,13 +62,13 @@
             this.DateEvent,
             this.LevelEvent,
             this.WinPlace,
-            this.Balls,
-            this.TypeEvent});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 229);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1124, 274);
-            this.dataGridView1.TabIndex = 0;
+            this.TypeEvent,
+            this.Balls});
+            this.gridPrizers.Location = new System.Drawing.Point(12, 145);
+            this.gridPrizers.Name = "gridPrizers";
+            this.gridPrizers.ReadOnly = true;
+            this.gridPrizers.Size = new System.Drawing.Size(1124, 358);
+            this.gridPrizers.TabIndex = 0;
             // 
             // SurnamePupil
             // 
@@ -119,19 +119,19 @@
             this.WinPlace.ReadOnly = true;
             this.WinPlace.Width = 83;
             // 
-            // Balls
-            // 
-            this.Balls.HeaderText = "Баллы";
-            this.Balls.Name = "Balls";
-            this.Balls.ReadOnly = true;
-            this.Balls.Width = 87;
-            // 
             // TypeEvent
             // 
             this.TypeEvent.HeaderText = "Классификация";
             this.TypeEvent.Name = "TypeEvent";
             this.TypeEvent.ReadOnly = true;
             this.TypeEvent.Width = 165;
+            // 
+            // Balls
+            // 
+            this.Balls.HeaderText = "Баллы";
+            this.Balls.Name = "Balls";
+            this.Balls.ReadOnly = true;
+            this.Balls.Width = 87;
             // 
             // typeFilter
             // 
@@ -140,8 +140,7 @@
             this.typeFilter.Items.AddRange(new object[] {
             "Отсутствует",
             "По ученику",
-            "По событию",
-            "По дате"});
+            "По событию"});
             this.typeFilter.Location = new System.Drawing.Point(254, 36);
             this.typeFilter.Name = "typeFilter";
             this.typeFilter.Size = new System.Drawing.Size(290, 28);
@@ -156,10 +155,28 @@
             this.groupBox1.Controls.Add(this.typeFilter);
             this.groupBox1.Location = new System.Drawing.Point(12, 21);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(657, 202);
+            this.groupBox1.Size = new System.Drawing.Size(657, 118);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Фильтрация";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(71, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Выборка по";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(71, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Тип фильтрации";
             // 
             // ItemFilter
             // 
@@ -172,36 +189,18 @@
             this.ItemFilter.TabIndex = 2;
             this.ItemFilter.SelectedIndexChanged += new System.EventHandler(this.ItemFilter_SelectedIndexChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Тип фильтрации";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Выборка по";
-            // 
             // PortfolioPupil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1148, 515);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridPrizers);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "PortfolioPupil";
             this.Text = "PortfolioPupil";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPrizers)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -210,7 +209,12 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridPrizers;
+        private System.Windows.Forms.ComboBox typeFilter;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox ItemFilter;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn SurnamePupil;
         private System.Windows.Forms.DataGridViewTextBoxColumn NamePupil;
         private System.Windows.Forms.DataGridViewTextBoxColumn SecondName;
@@ -218,12 +222,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DateEvent;
         private System.Windows.Forms.DataGridViewTextBoxColumn LevelEvent;
         private System.Windows.Forms.DataGridViewTextBoxColumn WinPlace;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Balls;
         private System.Windows.Forms.DataGridViewTextBoxColumn TypeEvent;
-        private System.Windows.Forms.ComboBox typeFilter;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox ItemFilter;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Balls;
     }
 }

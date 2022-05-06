@@ -90,6 +90,7 @@ namespace AIS_School.Forms
             this.extracurricularActivitiesButton.TabIndex = 2;
             this.extracurricularActivitiesButton.Text = "Внеурочная деятельность";
             this.extracurricularActivitiesButton.UseVisualStyleBackColor = false;
+            this.extracurricularActivitiesButton.Click += new System.EventHandler(this.extracurricularActivitiesButton_Click);
             // 
             // achivementsButton
             // 

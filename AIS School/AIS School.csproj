@@ -152,6 +152,12 @@
     <Compile Include="Forms\PortfolioPupil.Designer.cs">
       <DependentUpon>PortfolioPupil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RatingPupil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RatingPupil.Designer.cs">
+      <DependentUpon>RatingPupil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TablesAdminPanel\TableUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PortfolioPupil.resx">
       <DependentUpon>PortfolioPupil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RatingPupil.resx">
+      <DependentUpon>RatingPupil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TablesAdminPanel\TableUsers.resx">
       <DependentUpon>TableUsers.cs</DependentUpon>

@@ -77,3 +77,4 @@ C:\Users\PC_home\Desktop\AIS School\AIS School\obj\Debug\AIS School.csproj.CopyC
 C:\Users\PC_home\Desktop\AIS School\AIS School\obj\Debug\AIS School.exe
 C:\Users\PC_home\Desktop\AIS School\AIS School\obj\Debug\AIS School.pdb
 C:\Users\PC_home\Desktop\AIS School\AIS School\obj\Debug\AIS_School.Forms.PortfolioPupil.resources
+C:\Users\PC_home\Desktop\AIS School\AIS School\obj\Debug\AIS_School.Forms.RatingPupil.resources

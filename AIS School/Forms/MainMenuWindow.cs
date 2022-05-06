@@ -107,5 +107,11 @@ namespace AIS_School.Forms
             PortfolioPupil portfolioPupil = new PortfolioPupil(this);
             portfolioPupil.Show();
         }
+
+        private void extracurricularActivitiesButton_Click(object sender, EventArgs e)
+        {
+            RatingPupil ratingPupil = new RatingPupil(this);
+            ratingPupil.Show();
+        }
     }
 }

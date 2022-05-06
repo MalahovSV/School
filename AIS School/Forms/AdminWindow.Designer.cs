@@ -83,6 +83,8 @@ namespace AIS_School.Forms
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.таблицаКоэффициентовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.таблицуПользователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -135,6 +137,9 @@ namespace AIS_School.Forms
             // 
             // openToolStripMenuItem
             // 
+            this.openToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.таблицаКоэффициентовToolStripMenuItem,
+            this.таблицуПользователейToolStripMenuItem});
             this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
@@ -327,7 +332,7 @@ namespace AIS_School.Forms
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.optionsToolStripMenuItem.Text = "&Параметры";
             // 
             // windowsMenu
@@ -532,6 +537,18 @@ namespace AIS_School.Forms
             this.toolStripStatusLabel.Size = new System.Drawing.Size(66, 17);
             this.toolStripStatusLabel.Text = "Состояние";
             // 
+            // таблицаКоэффициентовToolStripMenuItem
+            // 
+            this.таблицаКоэффициентовToolStripMenuItem.Name = "таблицаКоэффициентовToolStripMenuItem";
+            this.таблицаКоэффициентовToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.таблицаКоэффициентовToolStripMenuItem.Text = "Таблица коэффициентов";
+            // 
+            // таблицуПользователейToolStripMenuItem
+            // 
+            this.таблицуПользователейToolStripMenuItem.Name = "таблицуПользователейToolStripMenuItem";
+            this.таблицуПользователейToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.таблицуПользователейToolStripMenuItem.Text = "Таблицу пользователей";
+            // 
             // AdminWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -609,6 +626,8 @@ namespace AIS_School.Forms
         private System.Windows.Forms.ToolStripButton printPreviewToolStripButton;
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.ToolStripMenuItem таблицаКоэффициентовToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem таблицуПользователейToolStripMenuItem;
     }
 }
 
