@@ -45,11 +45,11 @@ namespace AIS_School
             this.LoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(60)))), ((int)(((byte)(210)))));
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.ForeColor = System.Drawing.Color.White;
-            this.LoginButton.Location = new System.Drawing.Point(227, 226);
+            this.LoginButton.Location = new System.Drawing.Point(212, 218);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(158, 51);
-            this.LoginButton.TabIndex = 2;
-            this.LoginButton.Text = "Log in";
+            this.LoginButton.Size = new System.Drawing.Size(192, 64);
+            this.LoginButton.TabIndex = 3;
+            this.LoginButton.Text = "Войти";
             this.LoginButton.UseVisualStyleBackColor = false;
             // 
             // loginUser
@@ -72,27 +72,27 @@ namespace AIS_School
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(108, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 20);
+            this.label1.Size = new System.Drawing.Size(59, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "User name";
+            this.label1.Text = "Логин";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(108, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.Size = new System.Drawing.Size(70, 20);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Password";
+            this.label2.Text = "Пароль";
             // 
             // viewPasswordCheck
             // 
             this.viewPasswordCheck.AutoSize = true;
             this.viewPasswordCheck.Location = new System.Drawing.Point(212, 169);
             this.viewPasswordCheck.Name = "viewPasswordCheck";
-            this.viewPasswordCheck.Size = new System.Drawing.Size(154, 24);
-            this.viewPasswordCheck.TabIndex = 5;
-            this.viewPasswordCheck.Text = "Show password";
+            this.viewPasswordCheck.Size = new System.Drawing.Size(169, 24);
+            this.viewPasswordCheck.TabIndex = 2;
+            this.viewPasswordCheck.Text = "Показать пароль";
             this.viewPasswordCheck.UseVisualStyleBackColor = true;
             // 
             // Authorization
@@ -114,7 +114,7 @@ namespace AIS_School
             this.MinimizeBox = false;
             this.Name = "Authorization";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Authorization";
+            this.Text = "Авторизация";
             this.ResumeLayout(false);
             this.PerformLayout();
 

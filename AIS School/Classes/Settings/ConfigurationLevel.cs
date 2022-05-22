@@ -10,23 +10,7 @@ namespace AIS_School.Classes.Settings
 {
     static class ConfigurationLevel
     {
-        /// <summary>
-        /// Чтение записи из кофигуратора SQL строки
-        /// </summary>
-        public static string ReadSettingSqlConnection()
-        {
-            try
-            {
-                var appSettings = ConfigurationManager.AppSettings;
-                string result = appSettings["SqlConnection"] ?? "Not Found";
-                return result;
-            }
-            catch (ConfigurationErrorsException)
-            {
-                MessageBox.Show("Error reading app settings", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return null;
-            }
-        }
+        
 
         /// <summary>
         /// Чтение записи из кофигуратора

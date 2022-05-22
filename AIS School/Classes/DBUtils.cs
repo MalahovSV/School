@@ -12,44 +12,47 @@ namespace AIS_School.Classes
 {
     class DBUtils
     {
-        /// <summary>
-        /// Connection string from app.config.
-        /// </summary>
-        /// <returns>If first start project, method return string connection with data base for developing.</returns>
-        public static string GetConnectionString()
+
+        static public DataTable GetDataSetFromDataBase(string CommandSQL, MySqlConnection connection)
         {
-            //return ConfigurationManager.ConnectionStrings["SqlConnection"].ToString();
-            return Classes.Settings.ConfigurationLevel.ReadSetting("SqlConnection");
+            MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(CommandSQL, connection);
+            DataTable dt = new DataTable();
+            sqlDataAdapter.Fill(dt);
+            return dt;
+        }
+
+        static public void ExecuteSqlCommand(string CommandSQL, MySqlConnection Connection)
+        {
+            MySqlCommand sqlCommand = new MySqlCommand(CommandSQL, Connection);
+            sqlCommand.ExecuteNonQuery();
+        }
+
+
+        static public DataTable loadDataTable1(string CommandSql)
+        {
+            MySqlConnection connection = new MySqlConnection();
+            var task = SetupConnectionToServer("SqlConnection");
+            LoaderForm ld = new LoaderForm(task.AsTask());
+            ld.ShowDialog();
+            connection = task.Result;
+
+            MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(CommandSql, connection);
+            DataTable dt = new DataTable();
+            sqlDataAdapter.Fill(dt);
+            connection.Close();
+            return dt;
         }
 
         /// <summary>
-        /// Fetching data from a database.
+        /// Установка соединения
         /// </summary>
-        /// <param name="select">Line with data fetch command</param>
-        /// <returns>Sample result</returns>
-        public static DataSet GetDataSetFromDataBase(string select)
+        /// <returns>Асинхронный поток с открытым соединением</returns>
+        async static public ValueTask<MySqlConnection> SetupConnectionToServer(string NameKeyConnection)
         {
-            using (MySqlConnection connection = new MySqlConnection(GetConnectionString()))
-            {
-                connection.Open();
-                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(select, connection);
-                DataSet ds = new DataSet();
-                dataAdapter.Fill(ds);
-                return ds;
-            }
+            MySqlConnection connection = new MySqlConnection(Settings.ConfigurationLevel.ReadSetting(NameKeyConnection));
+            await connection.OpenAsync();
+            return connection;
         }
-        /// <summary>
-        /// Example SQL commands (INSERT, UPDATE, DELETE).
-        /// </summary>
-        /// <param name="select">It`s command "select..."</param>
-        public static void ExecuteSqlCommand(string select)
-        {
-            using (MySqlConnection connection = new MySqlConnection(GetConnectionString()))
-            {
-                connection.Open();
-                MySqlCommand sqlCommand = new MySqlCommand(select, connection);
-                MySqlDataReader dataReader = sqlCommand.ExecuteReader();
-            }
-        }
+
     }
 }

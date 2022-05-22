@@ -78,3 +78,47 @@ C:\Users\PC_home\Desktop\AIS School\AIS School\obj\Debug\AIS School.exe
 C:\Users\PC_home\Desktop\AIS School\AIS School\obj\Debug\AIS School.pdb
 C:\Users\PC_home\Desktop\AIS School\AIS School\obj\Debug\AIS_School.Forms.PortfolioPupil.resources
 C:\Users\PC_home\Desktop\AIS School\AIS School\obj\Debug\AIS_School.Forms.RatingPupil.resources
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\AIS School.exe.config
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\AIS School.exe
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\AIS School.pdb
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\Google.Protobuf.dll
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\MySql.Data.dll
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\System.Buffers.dll
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\System.Memory.dll
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\ZstdNet.dll
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\Google.Protobuf.pdb
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\Google.Protobuf.xml
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\MySql.Data.xml
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\System.Buffers.xml
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\System.Memory.xml
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Sergey\Source\Repos\School\AIS School\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS School.csproj.AssemblyReference.cache
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS School.csproj.SuggestedBindingRedirects.cache
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS_School.Forms.AboutProgramWindow.resources
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS_School.Authorization.resources
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS_School.Forms.ConnectDataBaseWindow.resources
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS_School.Forms.MainMenuWindow.resources
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS_School.Forms.AdminWindow.resources
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS_School.Forms.PortfolioPupil.resources
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS_School.Forms.RatingPupil.resources
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS_School.Forms.TablesAdminPanel.TableUsers.resources
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS_School.Properties.Resources.resources
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS School.csproj.GenerateResource.cache
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS School.csproj.CoreCompileInputs.cache
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS School.csproj.CopyComplete
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS School.exe
+C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS School.pdb
+C:\Users\Sergey\source\repos\School\AIS School\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Sergey\source\repos\School\AIS School\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Sergey\source\repos\School\AIS School\obj\Debug\AIS_School.LoaderForm.resources

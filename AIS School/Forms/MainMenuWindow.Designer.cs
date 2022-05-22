@@ -31,7 +31,7 @@ namespace AIS_School.Forms
         {
             this.administratedButton = new System.Windows.Forms.Button();
             this.partfolioButton = new System.Windows.Forms.Button();
-            this.extracurricularActivitiesButton = new System.Windows.Forms.Button();
+            this.raitingPupils = new System.Windows.Forms.Button();
             this.achivementsButton = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
             this.HelpButton = new System.Windows.Forms.Button();
@@ -74,23 +74,23 @@ namespace AIS_School.Forms
             this.partfolioButton.UseVisualStyleBackColor = false;
             this.partfolioButton.Click += new System.EventHandler(this.PartfolioButton_Click);
             // 
-            // extracurricularActivitiesButton
+            // raitingPupils
             // 
-            this.extracurricularActivitiesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(105)))), ((int)(((byte)(255)))));
-            this.extracurricularActivitiesButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.extracurricularActivitiesButton.Enabled = false;
-            this.extracurricularActivitiesButton.FlatAppearance.BorderSize = 0;
-            this.extracurricularActivitiesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(60)))), ((int)(((byte)(210)))));
-            this.extracurricularActivitiesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(60)))), ((int)(((byte)(210)))));
-            this.extracurricularActivitiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.extracurricularActivitiesButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.extracurricularActivitiesButton.Location = new System.Drawing.Point(510, 118);
-            this.extracurricularActivitiesButton.Name = "extracurricularActivitiesButton";
-            this.extracurricularActivitiesButton.Size = new System.Drawing.Size(146, 109);
-            this.extracurricularActivitiesButton.TabIndex = 2;
-            this.extracurricularActivitiesButton.Text = "Внеурочная деятельность";
-            this.extracurricularActivitiesButton.UseVisualStyleBackColor = false;
-            this.extracurricularActivitiesButton.Click += new System.EventHandler(this.extracurricularActivitiesButton_Click);
+            this.raitingPupils.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(105)))), ((int)(((byte)(255)))));
+            this.raitingPupils.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.raitingPupils.Enabled = false;
+            this.raitingPupils.FlatAppearance.BorderSize = 0;
+            this.raitingPupils.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(60)))), ((int)(((byte)(210)))));
+            this.raitingPupils.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(60)))), ((int)(((byte)(210)))));
+            this.raitingPupils.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.raitingPupils.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.raitingPupils.Location = new System.Drawing.Point(510, 118);
+            this.raitingPupils.Name = "raitingPupils";
+            this.raitingPupils.Size = new System.Drawing.Size(146, 109);
+            this.raitingPupils.TabIndex = 2;
+            this.raitingPupils.Text = "Рейтинг учащихся";
+            this.raitingPupils.UseVisualStyleBackColor = false;
+            this.raitingPupils.Click += new System.EventHandler(this.extracurricularActivitiesButton_Click);
             // 
             // achivementsButton
             // 
@@ -155,7 +155,7 @@ namespace AIS_School.Forms
             this.tableLayoutPanel1.Controls.Add(this.HelpButton, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.SettingsButton, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.achivementsButton, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.extracurricularActivitiesButton, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.raitingPupils, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.partfolioButton, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.administratedButton, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -188,7 +188,7 @@ namespace AIS_School.Forms
         #endregion
         private System.Windows.Forms.Button administratedButton;
         private System.Windows.Forms.Button partfolioButton;
-        private System.Windows.Forms.Button extracurricularActivitiesButton;
+        private System.Windows.Forms.Button raitingPupils;
         private System.Windows.Forms.Button achivementsButton;
         private System.Windows.Forms.Button SettingsButton;
         private System.Windows.Forms.Button HelpButton;

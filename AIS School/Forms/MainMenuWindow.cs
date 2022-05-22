@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace AIS_School.Forms
     /// </summary>
     public partial class MainMenuWindow : Form
     {
+        public MySqlConnection MyConnection;
         public readonly Classes.Authorization.User user;
         private readonly Authorization authorization;
         /// <summary>
@@ -23,7 +25,8 @@ namespace AIS_School.Forms
         /// <param name="user">Класс пользователь</param>
         public MainMenuWindow(Classes.Authorization.User user, Authorization authorization)
         {
-            InitializeComponent();
+           InitializeComponent();
+            MyConnection = authorization.MyConnection;
             EventsButton();
             this.user = user;
             this.authorization = authorization;
@@ -37,7 +40,7 @@ namespace AIS_School.Forms
             {
                 administratedButton.Enabled = true;
                 partfolioButton.Enabled = true;
-                extracurricularActivitiesButton.Enabled = true;
+                raitingPupils.Enabled = true;
                 achivementsButton.Enabled = true;
                 SettingsButton.Enabled = true;
                 HelpButton.Enabled = true;
@@ -46,7 +49,7 @@ namespace AIS_School.Forms
             {
                 administratedButton.Enabled = true;
                 partfolioButton.Enabled = true;
-                extracurricularActivitiesButton.Enabled = true;
+                raitingPupils.Enabled = true;
                 achivementsButton.Enabled = true;
                 SettingsButton.Enabled = true;
                 HelpButton.Enabled = true;
@@ -54,7 +57,7 @@ namespace AIS_School.Forms
             if (user.Role.ToLower() == "teacher")
             {
                 partfolioButton.Enabled = true;
-                extracurricularActivitiesButton.Enabled = true;
+                raitingPupils.Enabled = true;
                 achivementsButton.Enabled = true;
                 SettingsButton.Enabled = true;
                 HelpButton.Enabled = true;
@@ -62,7 +65,7 @@ namespace AIS_School.Forms
             if (user.Role.ToLower() == "pupil")
             {
                 partfolioButton.Enabled = true;
-                extracurricularActivitiesButton.Enabled = true;
+                raitingPupils.Enabled = true;
                 achivementsButton.Enabled = true;
                 SettingsButton.Enabled = true;
                 HelpButton.Enabled = true;

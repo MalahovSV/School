@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -13,11 +8,13 @@ namespace AIS_School.Forms
 {
     public partial class PortfolioPupil : Form
     {
+        MySqlConnection _myConnection;
         private readonly MainMenuWindow mainMenuWindow;
         public PortfolioPupil(MainMenuWindow mainMenu)
         {
             InitializeComponent();
             mainMenuWindow = mainMenu;
+            _myConnection = mainMenu.MyConnection;
             typeFilter.SelectedIndex = 0;
             loadData($"call sp_Get_Prizers ({mainMenu.user.ID})");
         }
@@ -25,8 +22,8 @@ namespace AIS_School.Forms
         private void loadData(string select)
         {
             gridPrizers.Rows.Clear();
-            DataSet ds = Classes.DBUtils.GetDataSetFromDataBase(select);
-            foreach(DataRow row in ds.Tables[0].Rows)
+            DataTable dt = Classes.DBUtils.GetDataSetFromDataBase(select, _myConnection);
+            foreach(DataRow row in dt.Rows)
             {
                 gridPrizers.Rows.Add(row.ItemArray[0], //surname
                                        row.ItemArray[1], //first_name
@@ -52,23 +49,23 @@ namespace AIS_School.Forms
             }
             if(typeFilter.SelectedIndex == 1)
             {
-                DataSet ds = Classes.DBUtils.GetDataSetFromDataBase($@"select concat(surname, ' ', first_name, ' ', second_name) as 'ФИО', pk_pupil from users, pupil, class, teacher
+                DataTable table = Classes.DBUtils.GetDataSetFromDataBase($@"select concat(surname, ' ', first_name, ' ', second_name) as 'ФИО', pk_pupil from users, pupil, class, teacher
 where fk_teacher = pk_teacher and
 pk_users = pupil.FK_user and pk_class = fk_class and
-teacher.fk_user = {mainMenuWindow.user.ID}");
-                ItemFilter.DataSource = ds.Tables[0];
+teacher.fk_user = {mainMenuWindow.user.ID}", _myConnection);
+                ItemFilter.DataSource = table;
                 ItemFilter.DisplayMember = "ФИО";
                 ItemFilter.ValueMember = "pk_pupil";
             }
             if (typeFilter.SelectedIndex == 2)
             {
-                DataSet ds = Classes.DBUtils.GetDataSetFromDataBase($@"select PK_event, CONCAT(name_event, ' ', DAY(date_event), '.', MONTH(date_event),'.',YEAR(date_event)) as 'event' 
+                DataTable table = Classes.DBUtils.GetDataSetFromDataBase($@"select PK_event, CONCAT(name_event, ' ', DAY(date_event), '.', MONTH(date_event),'.',YEAR(date_event)) as 'event' 
 from events, pupil, class, teacher, participation, users
 where class.FK_teacher = PK_teacher and 
 pupil.FK_user = pk_users and fk_class = pk_class and
 FK_event = PK_Event and pk_pupil = fk_pupil and
-teacher.fk_user = {mainMenuWindow.user.ID}");   
-                ItemFilter.DataSource = ds.Tables[0];
+teacher.fk_user = {mainMenuWindow.user.ID}", _myConnection);   
+                ItemFilter.DataSource = table;
                 ItemFilter.DisplayMember = "event";
                 ItemFilter.ValueMember = "pk_event";
             }

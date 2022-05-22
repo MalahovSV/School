@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace AIS_School
 {
     public partial class Authorization : Form
     {
+        public MySqlConnection MyConnection = new MySqlConnection();
         public Authorization()
         {
             InitializeComponent();
@@ -23,9 +25,14 @@ namespace AIS_School
         {
             LoginButton.Click += (s, e) => 
             {
-                //Forms.MainMenuWindow mm = new Forms.MainMenuWindow();
-                //mm.Show();
-                Classes.Authorization.User user = Classes.Authorization.Аuthentication.CheckDataUser(loginUser.Text, passwordUser.Text);
+                if (MyConnection.State != ConnectionState.Open)
+                {
+                    var task = Classes.DBUtils.SetupConnectionToServer("SqlConnection");
+                    LoaderForm ld = new LoaderForm(task.AsTask());
+                    ld.ShowDialog();
+                    MyConnection = task.Result;
+                }
+                Classes.Authorization.User user = Classes.Authorization.Аuthentication.CheckDataUser(loginUser.Text, passwordUser.Text, MyConnection);
                 if (user != null)
                 {
                     Forms.MainMenuWindow mainMenu = new Forms.MainMenuWindow(user, this);
