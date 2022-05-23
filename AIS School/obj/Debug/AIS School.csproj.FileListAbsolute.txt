@@ -124,3 +124,4 @@ C:\Users\Sergey\source\repos\School\AIS School\bin\Debug\System.Threading.Tasks.
 C:\Users\Sergey\source\repos\School\AIS School\obj\Debug\AIS_School.LoaderForm.resources
 C:\Users\Sergey\source\repos\School\AIS School\obj\Debug\AIS_School.Forms.TablesAdminPanel.TeacherTable.resources
 C:\Users\Sergey\source\repos\School\AIS School\obj\Debug\AIS_School.Forms.TablesAdminPanel.TablePupils.resources
+C:\Users\Sergey\source\repos\School\AIS School\obj\Debug\AIS_School.Forms.addedUser.resources

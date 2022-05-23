@@ -23,10 +23,9 @@ namespace AIS_School.Forms
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.Text = "Окно " + childFormNumber++;
-            childForm.Show();
+            addedUser addedUser = new addedUser(this);
+            addedUser.MdiParent = this;
+            addedUser.Show();
         }
 
         private void OpenFile(object sender, EventArgs e)

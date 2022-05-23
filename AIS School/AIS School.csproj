@@ -126,6 +126,12 @@
     <Compile Include="Classes\EncryptionWords\Encryption.cs" />
     <Compile Include="Classes\WordDocument.cs" />
     <Compile Include="Classes\WordSelection.cs" />
+    <Compile Include="Forms\addedUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\addedUser.Designer.cs">
+      <DependentUpon>addedUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoaderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\addedUser.resx">
+      <DependentUpon>addedUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoaderForm.resx">
       <DependentUpon>LoaderForm.cs</DependentUpon>
     </EmbeddedResource>

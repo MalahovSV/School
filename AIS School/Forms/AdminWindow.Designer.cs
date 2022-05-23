@@ -106,8 +106,8 @@ namespace AIS_School.Forms
             this.exitToolStripMenuItem});
             this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
             this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(48, 20);
-            this.fileMenu.Text = "&Файл";
+            this.fileMenu.Size = new System.Drawing.Size(66, 20);
+            this.fileMenu.Text = "&Открыть";
             // 
             // newToolStripMenuItem
             // 
@@ -115,8 +115,8 @@ namespace AIS_School.Forms
             this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.newToolStripMenuItem.Text = "&Создать";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.newToolStripMenuItem.Text = "&Создать пользователя";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.ShowNewForm);
             // 
             // openToolStripMenuItem
@@ -129,7 +129,7 @@ namespace AIS_School.Forms
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
             this.openToolStripMenuItem.Text = "&Открыть";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenFile);
             // 
@@ -160,27 +160,27 @@ namespace AIS_School.Forms
             // учителяToolStripMenuItem
             // 
             this.учителяToolStripMenuItem.Name = "учителяToolStripMenuItem";
-            this.учителяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.учителяToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.учителяToolStripMenuItem.Text = "Учителя";
             this.учителяToolStripMenuItem.Click += new System.EventHandler(this.учителяToolStripMenuItem_Click);
             // 
             // администрацияToolStripMenuItem
             // 
             this.администрацияToolStripMenuItem.Name = "администрацияToolStripMenuItem";
-            this.администрацияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.администрацияToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.администрацияToolStripMenuItem.Text = "Администрация";
             // 
             // ученикиToolStripMenuItem
             // 
             this.ученикиToolStripMenuItem.Name = "ученикиToolStripMenuItem";
-            this.ученикиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ученикиToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.ученикиToolStripMenuItem.Text = "Ученики";
             this.ученикиToolStripMenuItem.Click += new System.EventHandler(this.ученикиToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(230, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(235, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -188,21 +188,21 @@ namespace AIS_School.Forms
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
             this.saveToolStripMenuItem.Text = "&Сохранить";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
             this.saveAsToolStripMenuItem.Text = "Сохранить &как";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(230, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(235, 6);
             // 
             // printToolStripMenuItem
             // 
@@ -210,7 +210,7 @@ namespace AIS_School.Forms
             this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
             this.printToolStripMenuItem.Text = "&Печать";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
@@ -219,24 +219,24 @@ namespace AIS_School.Forms
             this.printPreviewToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printPreviewToolStripMenuItem.Image")));
             this.printPreviewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
             this.printPreviewToolStripMenuItem.Text = "Предварительный прос&мотр";
             // 
             // printSetupToolStripMenuItem
             // 
             this.printSetupToolStripMenuItem.Name = "printSetupToolStripMenuItem";
-            this.printSetupToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.printSetupToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
             this.printSetupToolStripMenuItem.Text = "Настройка печати";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(230, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(235, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
             this.exitToolStripMenuItem.Text = "В&ыход";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
