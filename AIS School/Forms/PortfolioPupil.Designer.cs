@@ -28,7 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridPrizers = new System.Windows.Forms.DataGridView();
+            this.typeFilter = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ItemFilter = new System.Windows.Forms.ComboBox();
             this.SurnamePupil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamePupil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SecondName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,11 +52,6 @@
             this.WinPlace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TypeEvent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Balls = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeFilter = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ItemFilter = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridPrizers)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,74 +73,12 @@
             this.WinPlace,
             this.TypeEvent,
             this.Balls});
-            this.gridPrizers.Location = new System.Drawing.Point(12, 145);
+            this.gridPrizers.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gridPrizers.Location = new System.Drawing.Point(0, 205);
             this.gridPrizers.Name = "gridPrizers";
             this.gridPrizers.ReadOnly = true;
-            this.gridPrizers.Size = new System.Drawing.Size(1124, 358);
+            this.gridPrizers.Size = new System.Drawing.Size(1429, 370);
             this.gridPrizers.TabIndex = 0;
-            // 
-            // SurnamePupil
-            // 
-            this.SurnamePupil.HeaderText = "Фамилия";
-            this.SurnamePupil.Name = "SurnamePupil";
-            this.SurnamePupil.ReadOnly = true;
-            this.SurnamePupil.Width = 108;
-            // 
-            // NamePupil
-            // 
-            this.NamePupil.HeaderText = "Имя";
-            this.NamePupil.Name = "NamePupil";
-            this.NamePupil.ReadOnly = true;
-            this.NamePupil.Width = 67;
-            // 
-            // SecondName
-            // 
-            this.SecondName.HeaderText = "Отчество";
-            this.SecondName.Name = "SecondName";
-            this.SecondName.ReadOnly = true;
-            this.SecondName.Width = 110;
-            // 
-            // EventName
-            // 
-            this.EventName.HeaderText = "Мероприятие";
-            this.EventName.Name = "EventName";
-            this.EventName.ReadOnly = true;
-            this.EventName.Width = 144;
-            // 
-            // DateEvent
-            // 
-            this.DateEvent.HeaderText = "Дата мероприятия";
-            this.DateEvent.Name = "DateEvent";
-            this.DateEvent.ReadOnly = true;
-            this.DateEvent.Width = 170;
-            // 
-            // LevelEvent
-            // 
-            this.LevelEvent.HeaderText = "Уровень";
-            this.LevelEvent.Name = "LevelEvent";
-            this.LevelEvent.ReadOnly = true;
-            this.LevelEvent.Width = 104;
-            // 
-            // WinPlace
-            // 
-            this.WinPlace.HeaderText = "Место";
-            this.WinPlace.Name = "WinPlace";
-            this.WinPlace.ReadOnly = true;
-            this.WinPlace.Width = 83;
-            // 
-            // TypeEvent
-            // 
-            this.TypeEvent.HeaderText = "Классификация";
-            this.TypeEvent.Name = "TypeEvent";
-            this.TypeEvent.ReadOnly = true;
-            this.TypeEvent.Width = 165;
-            // 
-            // Balls
-            // 
-            this.Balls.HeaderText = "Баллы";
-            this.Balls.Name = "Balls";
-            this.Balls.ReadOnly = true;
-            this.Balls.Width = 87;
             // 
             // typeFilter
             // 
@@ -189,17 +136,99 @@
             this.ItemFilter.TabIndex = 2;
             this.ItemFilter.SelectedIndexChanged += new System.EventHandler(this.ItemFilter_SelectedIndexChanged);
             // 
+            // SurnamePupil
+            // 
+            this.SurnamePupil.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SurnamePupil.DefaultCellStyle = dataGridViewCellStyle10;
+            this.SurnamePupil.HeaderText = "Фамилия";
+            this.SurnamePupil.Name = "SurnamePupil";
+            this.SurnamePupil.ReadOnly = true;
+            // 
+            // NamePupil
+            // 
+            this.NamePupil.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.NamePupil.DefaultCellStyle = dataGridViewCellStyle11;
+            this.NamePupil.HeaderText = "Имя";
+            this.NamePupil.Name = "NamePupil";
+            this.NamePupil.ReadOnly = true;
+            // 
+            // SecondName
+            // 
+            this.SecondName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SecondName.DefaultCellStyle = dataGridViewCellStyle12;
+            this.SecondName.HeaderText = "Отчество";
+            this.SecondName.Name = "SecondName";
+            this.SecondName.ReadOnly = true;
+            // 
+            // EventName
+            // 
+            this.EventName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EventName.DefaultCellStyle = dataGridViewCellStyle13;
+            this.EventName.HeaderText = "Мероприятие";
+            this.EventName.Name = "EventName";
+            this.EventName.ReadOnly = true;
+            // 
+            // DateEvent
+            // 
+            this.DateEvent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DateEvent.DefaultCellStyle = dataGridViewCellStyle14;
+            this.DateEvent.HeaderText = "Дата мероприятия";
+            this.DateEvent.Name = "DateEvent";
+            this.DateEvent.ReadOnly = true;
+            // 
+            // LevelEvent
+            // 
+            this.LevelEvent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LevelEvent.DefaultCellStyle = dataGridViewCellStyle15;
+            this.LevelEvent.HeaderText = "Уровень";
+            this.LevelEvent.Name = "LevelEvent";
+            this.LevelEvent.ReadOnly = true;
+            // 
+            // WinPlace
+            // 
+            this.WinPlace.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.WinPlace.DefaultCellStyle = dataGridViewCellStyle16;
+            this.WinPlace.HeaderText = "Место";
+            this.WinPlace.Name = "WinPlace";
+            this.WinPlace.ReadOnly = true;
+            // 
+            // TypeEvent
+            // 
+            this.TypeEvent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TypeEvent.DefaultCellStyle = dataGridViewCellStyle17;
+            this.TypeEvent.HeaderText = "Классификация";
+            this.TypeEvent.Name = "TypeEvent";
+            this.TypeEvent.ReadOnly = true;
+            // 
+            // Balls
+            // 
+            this.Balls.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Balls.DefaultCellStyle = dataGridViewCellStyle18;
+            this.Balls.HeaderText = "Баллы";
+            this.Balls.Name = "Balls";
+            this.Balls.ReadOnly = true;
+            // 
             // PortfolioPupil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1148, 515);
+            this.ClientSize = new System.Drawing.Size(1429, 575);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gridPrizers);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "PortfolioPupil";
-            this.Text = "PortfolioPupil";
+            this.Text = "Активность класса";
             ((System.ComponentModel.ISupportInitialize)(this.gridPrizers)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
