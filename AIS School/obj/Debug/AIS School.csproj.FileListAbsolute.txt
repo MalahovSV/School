@@ -122,3 +122,5 @@ C:\Users\Sergey\Source\Repos\School\AIS School\obj\Debug\AIS School.pdb
 C:\Users\Sergey\source\repos\School\AIS School\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\Sergey\source\repos\School\AIS School\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Sergey\source\repos\School\AIS School\obj\Debug\AIS_School.LoaderForm.resources
+C:\Users\Sergey\source\repos\School\AIS School\obj\Debug\AIS_School.Forms.TablesAdminPanel.TeacherTable.resources
+C:\Users\Sergey\source\repos\School\AIS School\obj\Debug\AIS_School.Forms.TablesAdminPanel.TablePupils.resources

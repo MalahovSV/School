@@ -35,6 +35,12 @@ namespace AIS_School.Forms
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.таблицаКоэффициентовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.таблицуПользователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.таблицаУчителейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.учителяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.администрацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ученикиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,8 +89,6 @@ namespace AIS_School.Forms
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.таблицаКоэффициентовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.таблицуПользователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -139,7 +143,8 @@ namespace AIS_School.Forms
             // 
             this.openToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.таблицаКоэффициентовToolStripMenuItem,
-            this.таблицуПользователейToolStripMenuItem});
+            this.таблицуПользователейToolStripMenuItem,
+            this.таблицаУчителейToolStripMenuItem});
             this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
@@ -147,6 +152,50 @@ namespace AIS_School.Forms
             this.openToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.openToolStripMenuItem.Text = "&Открыть";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenFile);
+            // 
+            // таблицаКоэффициентовToolStripMenuItem
+            // 
+            this.таблицаКоэффициентовToolStripMenuItem.Name = "таблицаКоэффициентовToolStripMenuItem";
+            this.таблицаКоэффициентовToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.таблицаКоэффициентовToolStripMenuItem.Text = "Таблица коэффициентов";
+            // 
+            // таблицуПользователейToolStripMenuItem
+            // 
+            this.таблицуПользователейToolStripMenuItem.Name = "таблицуПользователейToolStripMenuItem";
+            this.таблицуПользователейToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.таблицуПользователейToolStripMenuItem.Text = "Таблица пользователей";
+            this.таблицуПользователейToolStripMenuItem.Click += new System.EventHandler(this.таблицуПользователейToolStripMenuItem_Click);
+            // 
+            // таблицаУчителейToolStripMenuItem
+            // 
+            this.таблицаУчителейToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.учителяToolStripMenuItem,
+            this.администрацияToolStripMenuItem,
+            this.ученикиToolStripMenuItem});
+            this.таблицаУчителейToolStripMenuItem.Name = "таблицаУчителейToolStripMenuItem";
+            this.таблицаУчителейToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.таблицаУчителейToolStripMenuItem.Text = "Таблица ролей";
+            this.таблицаУчителейToolStripMenuItem.Click += new System.EventHandler(this.таблицаУчителейToolStripMenuItem_Click);
+            // 
+            // учителяToolStripMenuItem
+            // 
+            this.учителяToolStripMenuItem.Name = "учителяToolStripMenuItem";
+            this.учителяToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.учителяToolStripMenuItem.Text = "Учителя";
+            this.учителяToolStripMenuItem.Click += new System.EventHandler(this.учителяToolStripMenuItem_Click);
+            // 
+            // администрацияToolStripMenuItem
+            // 
+            this.администрацияToolStripMenuItem.Name = "администрацияToolStripMenuItem";
+            this.администрацияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.администрацияToolStripMenuItem.Text = "Администрация";
+            // 
+            // ученикиToolStripMenuItem
+            // 
+            this.ученикиToolStripMenuItem.Name = "ученикиToolStripMenuItem";
+            this.ученикиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ученикиToolStripMenuItem.Text = "Ученики";
+            this.ученикиToolStripMenuItem.Click += new System.EventHandler(this.ученикиToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -332,7 +381,7 @@ namespace AIS_School.Forms
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.optionsToolStripMenuItem.Text = "&Параметры";
             // 
             // windowsMenu
@@ -537,18 +586,6 @@ namespace AIS_School.Forms
             this.toolStripStatusLabel.Size = new System.Drawing.Size(66, 17);
             this.toolStripStatusLabel.Text = "Состояние";
             // 
-            // таблицаКоэффициентовToolStripMenuItem
-            // 
-            this.таблицаКоэффициентовToolStripMenuItem.Name = "таблицаКоэффициентовToolStripMenuItem";
-            this.таблицаКоэффициентовToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
-            this.таблицаКоэффициентовToolStripMenuItem.Text = "Таблица коэффициентов";
-            // 
-            // таблицуПользователейToolStripMenuItem
-            // 
-            this.таблицуПользователейToolStripMenuItem.Name = "таблицуПользователейToolStripMenuItem";
-            this.таблицуПользователейToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
-            this.таблицуПользователейToolStripMenuItem.Text = "Таблицу пользователей";
-            // 
             // AdminWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -628,6 +665,10 @@ namespace AIS_School.Forms
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem таблицаКоэффициентовToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem таблицуПользователейToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem таблицаУчителейToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem учителяToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem администрацияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ученикиToolStripMenuItem;
     }
 }
 

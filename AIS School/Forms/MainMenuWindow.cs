@@ -76,7 +76,7 @@ namespace AIS_School.Forms
         {
             administratedButton.Click += (s, e) =>
             {
-                Forms.AdminWindow adminWindow = new AdminWindow();
+                Forms.AdminWindow adminWindow = new AdminWindow(MyConnection);
                 adminWindow.Show();
             };
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,11 @@ namespace AIS_School.Forms
     public partial class AdminWindow : Form
     {
         private int childFormNumber = 0;
-
-        public AdminWindow()
+        public MySqlConnection MyConnection;
+        public AdminWindow(MySqlConnection sqlConnection)
         {
             InitializeComponent();
+            MyConnection = sqlConnection;
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -29,13 +31,13 @@ namespace AIS_School.Forms
 
         private void OpenFile(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            openFileDialog.Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string FileName = openFileDialog.FileName;
-            }
+            //OpenFileDialog openFileDialog = new OpenFileDialog();
+            //openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            //openFileDialog.Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";
+            //if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+            //{
+            //    string FileName = openFileDialog.FileName;
+            //}
         }
 
         private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -122,6 +124,34 @@ namespace AIS_School.Forms
         private void helpToolStripButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void таблицуПользователейToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            TablesAdminPanel.TableUsers tableUsers = new TablesAdminPanel.TableUsers(this);
+            tableUsers.MdiParent = this;
+            tableUsers.Show();
+
+        }
+
+        private void таблицаУчителейToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void учителяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TablesAdminPanel.TeacherTable teacherTable = new TablesAdminPanel.TeacherTable(this);
+            teacherTable.MdiParent = this;
+            teacherTable.Show();
+        }
+
+        private void ученикиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TablesAdminPanel.TablePupils tablePupils = new TablesAdminPanel.TablePupils(this);
+            tablePupils.MdiParent = this;
+            tablePupils.Show();
         }
     }
 }

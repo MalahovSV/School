@@ -176,11 +176,23 @@
     <Compile Include="Forms\RatingPupil.Designer.cs">
       <DependentUpon>RatingPupil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TablesAdminPanel\TablePupils.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TablesAdminPanel\TablePupils.Designer.cs">
+      <DependentUpon>TablePupils.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TablesAdminPanel\TableUsers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\TablesAdminPanel\TableUsers.Designer.cs">
       <DependentUpon>TableUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TablesAdminPanel\TeacherTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TablesAdminPanel\TeacherTable.Designer.cs">
+      <DependentUpon>TeacherTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -208,8 +220,14 @@
     <EmbeddedResource Include="Forms\RatingPupil.resx">
       <DependentUpon>RatingPupil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TablesAdminPanel\TablePupils.resx">
+      <DependentUpon>TablePupils.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TablesAdminPanel\TableUsers.resx">
       <DependentUpon>TableUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TablesAdminPanel\TeacherTable.resx">
+      <DependentUpon>TeacherTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

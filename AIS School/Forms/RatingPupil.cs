@@ -61,7 +61,6 @@ namespace AIS_School.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //call sp_Get_pupils_balls_Date('2022-02-19', '2022-02-20')
             loadData($@"call sp_Get_pupils_balls_Date('{stupidDate(startDate)}', '{stupidDate(endData)}')");
         }
 
@@ -105,20 +104,6 @@ namespace AIS_School.Forms
             }
             insertTable(wordDoc);
             wordDoc.Visible = true;
-
-
-
-            //SaveFileDialog saveFile = new SaveFileDialog();
-            //saveFile.Filter = "Text files(*.doc)|*.docx|All files(*.*)|*.*";
-            //saveFile.OverwritePrompt = true;
-            //saveFile.DefaultExt = "Text files(*.docx)";
-
-            //if (saveFile.ShowDialog() == DialogResult.OK)
-            //{
-            //   string filename = saveFile.FileName;
-            //   //Document.SaveAs(filename);
-            //   MessageBox.Show("Документ сохранён!", "Сохранение документа");
-            //}
         }
         // ВСТАВКА ТАБЛИЦЫ
         private void insertTable(WordDocument wordDoc)
@@ -161,20 +146,6 @@ namespace AIS_School.Forms
               
 
             }
-
-
-            //wordDoc.SetSelectionToCell(2, 1);
-            //wordDoc.Selection.Text = "Ячейка 2 1";
-            //wordDoc.Selection.FontSize = 23;
-            //wordDoc.Selection.Aligment = TextAligment.Center;
-
-            //wordDoc.SetSelectionToCell(3, 2);
-            //wordDoc.Selection.Text = "Ячейка 3 2";
-            //wordDoc.Selection.FontSize = 23;
-            //wordDoc.Selection.Aligment = TextAligment.Center;
-            //wordDoc.Selection.Bold = true;
-            //wordDoc.Selection.Border = BorderType.Double;
-
         }
     }
 }
