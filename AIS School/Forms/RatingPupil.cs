@@ -111,8 +111,8 @@ namespace AIS_School.Forms
             wordDoc.SetSelectionToBookmark("table");
 
 
-            wordDoc.InsertTable(4, gridPupilsRating.RowCount+1);
-
+            wordDoc.InsertTable(gridPupilsRating.RowCount+1, 4);
+            Console.WriteLine("Strings in table : " + gridPupilsRating.RowCount);
             wordDoc.SetColumnWidth(1, 80);
             wordDoc.SetColumnWidth(2, 200);
             wordDoc.SetColumnWidth(3, 80);
@@ -142,9 +142,7 @@ namespace AIS_School.Forms
 
                 wordDoc.SetSelectionToCell(counter, 4);
                 wordDoc.Selection.Text = row.Cells[4].Value.ToString();
-
-              
-
+                Console.WriteLine($@"{counter} : {row.Cells[0].Value}/{row.Cells[2].Value}/{row.Cells[3].Value}/{row.Cells[4].Value}");
             }
         }
     }

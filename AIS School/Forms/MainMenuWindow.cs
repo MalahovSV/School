@@ -116,5 +116,11 @@ namespace AIS_School.Forms
             RatingPupil ratingPupil = new RatingPupil(this);
             ratingPupil.Show();
         }
+
+        private void achivementsButton_Click(object sender, EventArgs e)
+        {
+            InsertAchiviment insertAchiviment = new InsertAchiviment(this);
+            insertAchiviment.ShowDialog();
+        }
     }
 }

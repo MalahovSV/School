@@ -118,10 +118,7 @@ namespace AIS_School.Forms
                     }
                     else
                     {
-                        Classes.DBUtils.ExecuteSqlCommand($@"call sp_insert_teacher('{loginBox.Text}', 
-'{passwordBox.Text}', '{SurnameBox.Text}', '{FirstNameBox.Text}', '{SecondNameBox.Text}', '{DateBirthPucker.Value.Date.ToShortDateString()}', 
-'{NumberPhone.Text}', '{emailBox.Text}', {classBox.SelectedValue});", _adminWindow.MyConnection);
-                        MessageBox.Show("Запись о учителе добавлена.", "Запись добавлена", MessageBoxButtons.OK);
+                        InsertTeacher();
                     }
                 }
             }

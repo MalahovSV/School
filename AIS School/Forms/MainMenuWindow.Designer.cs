@@ -106,8 +106,9 @@ namespace AIS_School.Forms
             this.achivementsButton.Name = "achivementsButton";
             this.achivementsButton.Size = new System.Drawing.Size(146, 109);
             this.achivementsButton.TabIndex = 5;
-            this.achivementsButton.Text = "Достижения";
+            this.achivementsButton.Text = "Добавить достижение";
             this.achivementsButton.UseVisualStyleBackColor = false;
+            this.achivementsButton.Click += new System.EventHandler(this.achivementsButton_Click);
             // 
             // SettingsButton
             // 

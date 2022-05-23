@@ -125,3 +125,4 @@ C:\Users\Sergey\source\repos\School\AIS School\obj\Debug\AIS_School.LoaderForm.r
 C:\Users\Sergey\source\repos\School\AIS School\obj\Debug\AIS_School.Forms.TablesAdminPanel.TeacherTable.resources
 C:\Users\Sergey\source\repos\School\AIS School\obj\Debug\AIS_School.Forms.TablesAdminPanel.TablePupils.resources
 C:\Users\Sergey\source\repos\School\AIS School\obj\Debug\AIS_School.Forms.addedUser.resources
+C:\Users\Sergey\source\repos\School\AIS School\obj\Debug\AIS_School.Forms.InsertAchiviment.resources
