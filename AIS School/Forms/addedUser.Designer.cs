@@ -47,7 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.emailBox = new System.Windows.Forms.TextBox();
-            this.DateBirthPucker = new System.Windows.Forms.DateTimePicker();
+            this.DateBirthPicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.showPassword = new System.Windows.Forms.CheckBox();
             this.clearAllButton = new System.Windows.Forms.Button();
@@ -257,11 +257,11 @@
             // 
             // DateBirthPucker
             // 
-            this.DateBirthPucker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateBirthPucker.Location = new System.Drawing.Point(189, 245);
-            this.DateBirthPucker.Name = "DateBirthPucker";
-            this.DateBirthPucker.Size = new System.Drawing.Size(256, 26);
-            this.DateBirthPucker.TabIndex = 60;
+            this.DateBirthPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateBirthPicker.Location = new System.Drawing.Point(189, 245);
+            this.DateBirthPicker.Name = "DateBirthPucker";
+            this.DateBirthPicker.Size = new System.Drawing.Size(256, 26);
+            this.DateBirthPicker.TabIndex = 60;
             // 
             // label8
             // 
@@ -370,7 +370,7 @@
             this.Controls.Add(this.clearAllButton);
             this.Controls.Add(this.showPassword);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.DateBirthPucker);
+            this.Controls.Add(this.DateBirthPicker);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.emailBox);
@@ -422,7 +422,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox emailBox;
-        private System.Windows.Forms.DateTimePicker DateBirthPucker;
+        private System.Windows.Forms.DateTimePicker DateBirthPicker;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox showPassword;
         private System.Windows.Forms.Button clearAllButton;

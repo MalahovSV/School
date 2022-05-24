@@ -73,6 +73,7 @@ namespace AIS_School.Forms
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.таблицаКлассовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,7 +125,8 @@ namespace AIS_School.Forms
             this.openToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.таблицаКоэффициентовToolStripMenuItem,
             this.таблицуПользователейToolStripMenuItem,
-            this.таблицаУчителейToolStripMenuItem});
+            this.таблицаУчителейToolStripMenuItem,
+            this.таблицаКлассовToolStripMenuItem});
             this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
@@ -422,6 +424,13 @@ namespace AIS_School.Forms
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.aboutToolStripMenuItem.Text = "&О программе ... ...";
             // 
+            // таблицаКлассовToolStripMenuItem
+            // 
+            this.таблицаКлассовToolStripMenuItem.Name = "таблицаКлассовToolStripMenuItem";
+            this.таблицаКлассовToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.таблицаКлассовToolStripMenuItem.Text = "Таблица классов";
+            this.таблицаКлассовToolStripMenuItem.Click += new System.EventHandler(this.таблицаКлассовToolStripMenuItem_Click);
+            // 
             // AdminWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,6 +492,7 @@ namespace AIS_School.Forms
         private System.Windows.Forms.ToolStripMenuItem учителяToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem администрацияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ученикиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem таблицаКлассовToolStripMenuItem;
     }
 }
 

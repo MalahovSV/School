@@ -17,7 +17,7 @@ namespace AIS_School.Forms
         {
             InitializeComponent();
             _adminWindow = adminWindow;
-            DateBirthPucker.Value = DateTime.Now;
+            DateBirthPicker.Value = DateTime.Now;
             loadCombobxes();
         }
         DataTable tableClass;
@@ -52,7 +52,7 @@ namespace AIS_School.Forms
             SurnameBox.Text = "";
             FirstNameBox.Text = "";
             SecondNameBox.Text = "";
-            DateBirthPucker.Value = DateTime.Now;
+            DateBirthPicker.Value = DateTime.Now;
             NumberPhone.Text = "";
             emailBox.Text = "";
         }
@@ -94,19 +94,22 @@ namespace AIS_School.Forms
                 {
 
                     Classes.DBUtils.ExecuteSqlCommand($@"call sp_Insert_pupil('{loginBox.Text}', 
-'{passwordBox.Text}', '{SurnameBox.Text}', '{FirstNameBox.Text}', '{SecondNameBox.Text}', '{DateBirthPucker.Value.Date.ToShortDateString()}', 
+'{passwordBox.Text}', '{SurnameBox.Text}', '{FirstNameBox.Text}', '{SecondNameBox.Text}', '{stupidDate(DateBirthPicker)}', 
 '{NumberPhone.Text}', '{emailBox.Text}', {classBox.SelectedValue});", _adminWindow.MyConnection);
                     MessageBox.Show("Запись о ученике добавлена.", "Запись добавлена", MessageBoxButtons.OK);
                 }
                 if (adminRadio.Checked)
                 {
+                    
                     Classes.DBUtils.ExecuteSqlCommand($@"call sp_insert_admin('{loginBox.Text}', 
-'{passwordBox.Text}', '{SurnameBox.Text}', '{FirstNameBox.Text}', '{SecondNameBox.Text}', '{DateBirthPucker.Value.Date.ToShortDateString()}', 
+'{passwordBox.Text}', '{SurnameBox.Text}', '{FirstNameBox.Text}', '{SecondNameBox.Text}', '{stupidDate(DateBirthPicker)}', 
 '{NumberPhone.Text}', '{emailBox.Text}', {positionCombo.SelectedValue});", _adminWindow.MyConnection);
                     MessageBox.Show("Запись о администраторе добавлена.", "Запись добавлена", MessageBoxButtons.OK);
+
                 }
                 if (teacherRadio.Checked)
                 {
+
                     DataTable dt = Classes.DBUtils.GetDataSetFromDataBase($@"select * from class where PK_class = {classBox.SelectedValue}", _adminWindow.MyConnection);
                     if (dt.Rows[0].ItemArray[3].ToString() != "")
                     {
@@ -128,10 +131,17 @@ namespace AIS_School.Forms
             }
         }
 
+        private string stupidDate(DateTimePicker timePicker)
+        {
+            return $@"{timePicker.Value.Year}-{timePicker.Value.Month}-{timePicker.Value.Day}";
+        }
+
+
+
         private void InsertTeacher()
         {
             Classes.DBUtils.ExecuteSqlCommand($@"call sp_insert_teacher('{loginBox.Text}', 
-'{passwordBox.Text}', '{SurnameBox.Text}', '{FirstNameBox.Text}', '{SecondNameBox.Text}', '{DateBirthPucker.Value.Date.ToShortDateString()}', 
+'{passwordBox.Text}', '{SurnameBox.Text}', '{FirstNameBox.Text}', '{SecondNameBox.Text}', '{stupidDate(DateBirthPicker)}', 
 '{NumberPhone.Text}', '{emailBox.Text}', {classBox.SelectedValue});", _adminWindow.MyConnection);
             MessageBox.Show("Запись о учителе добавлена.", "Запись добавлена", MessageBoxButtons.OK);
         }

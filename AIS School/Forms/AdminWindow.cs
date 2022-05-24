@@ -152,5 +152,12 @@ namespace AIS_School.Forms
             tablePupils.MdiParent = this;
             tablePupils.Show();
         }
+
+        private void таблицаКлассовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TablesAdminPanel.TableClasses tableClasses = new TablesAdminPanel.TableClasses(this);
+            tableClasses.MdiParent = this;
+            tableClasses.Show();
+        }
     }
 }
